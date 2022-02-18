@@ -1,0 +1,19 @@
+{
+  "name": "eleventy-scafold",
+  "version": "1.0.0",
+  "description": "eleventy scafold",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ace-web-solutions/eleventy-scafold.git"
+  },
+  "author": "prince omonu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ace-web-solutions/eleventy-scafold/issues"
+  },
+  "homepage": "https://github.com/ace-web-solutions/eleventy-scafold#readme"
+}
