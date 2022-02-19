@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | {{collections.global[0].data.site_name}}</title>
+    <link rel="stylesheets" href="../../assets/tailwind.css"/>
+  </head>
+  <body>
+    
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <!-- Include Netlify Identity for authentication -->
+    <script src="/assets/netlify-identity-widget.js"></script>
+    <script type="module" src="/admin/preview-templates/index.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', ()=>{
+        console.log('document ready')
+        const interval = setInterval(()=>{
+            console.log('setTimeout')
+            if(localStorage.getItem('gotrue.user')) return
+            let button = document.getElementsByTagName('button')[0]
+            if(button && button.textContent.toLowerCase()=="login with netlify identity"){
+                    button.textContent="Click here to Login"
+            }
+            
+            const svg = document.getElementsByTagName("svg")[0]
+            const newItem = document.createElement('div');
+            newItem.innerHTML = '<img height="50px"src="/{{collections.global[0].data.site_logo}}" />';
+            newItem.style.textAlign = 'center'
+        
+            if(svg) svg.replaceWith(newItem); 
+            clearInterval(interval)
+        },500)
+
+      }, false);
+    </script>
+  </body>
+</html>

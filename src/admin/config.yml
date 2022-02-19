@@ -1,0 +1,66 @@
+backend:
+  name: git-gateway
+  branch: main # Br/anch to update (optional; defaults to master)
+local_backend: true
+media_folder: uploads
+public_folder: /uploads/
+site_url: https://tomilolawilliam.netlify.app/
+collections:  
+  - name: settings
+    label: Settings   
+    files:
+      - label: Global
+        name: global
+        file: src/settings/global.md
+        fields:
+          - {label: "Site Name", name: "site_name", widget: "string"}
+          - {label: "Logo", name: "site_logo", widget: "image"}
+          - {label: "Favicon", name: "site_favicon", widget: "image"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone Number", name: "phone", widget: "string", default: "+234"}
+          - {label: "Facebook Url", name: "facebook", widget: "string"}
+          - {label: "Twitter Url", name: "twitter", widget: "string"}
+          - {label: "Instagram Url", name: "instagram", widget: "string"}
+      - label: Page Settings
+        name: landing-page
+        file: src/settings/landing-page.md
+        fields: 
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Content", name: "content", widget: "text"}   
+              - {label: "Image", name: "image", widget: "image"}
+          - label: Blogs
+            name: blogs
+            widget: list
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Link", name: "link", widget: "string"}
+          - label: Statistics
+            name: statistics
+            widget: list
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Quantity", name: "value", widget: "number"}
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - {label: "Header", name: "description", widget: "text"}
+              - {label: "Address", name: "address", widget: "text"}
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - {label: "About", name: "about", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}

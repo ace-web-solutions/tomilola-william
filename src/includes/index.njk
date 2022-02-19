@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Your description">
+        <meta name="author" content="Your name">
+
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="" /> <!-- website name -->
+        <meta property="og:site" content="" /> <!-- website link -->
+        <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+        <!-- Webpage Title -->
+        <title>Webpage Title</title>
+        
+        <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link href="./assets/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/fontawesome-all.min.css" rel="stylesheet">
+        <link href="./assets/swiper.css" rel="stylesheet">
+        <link href="./assets/styles.css" rel="stylesheet">
+        
+        <!-- Favicon  -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+    <body data-bs-spy="scroll" data-bs-target="#navbarExample">
+        
+        <!-- Navigation -->
+        <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+            <div class="container">
+
+                <!-- Image Logo -->
+                {# <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  #}
+
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <a class="navbar-brand logo-text" href="index.html">{{collections.global[0].data.site_name}}</a> 
+
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#header">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <span class="nav-item social-icons">
+                        <span class="fa-stack">
+                            <a href="{{collections.global[0].data.facebook}}">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="{{collections.global[0].data.twitter}}">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </span>
+                </div> <!-- end of navbar-collapse -->
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+
+        
+        <!-- Header -->
+        <header id="header" class="header">
+            <div class="header-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="h1-large">{{collections.landingPage[0].data.header.title}}</h1>
+                            <a class="btn-solid-lg" href="{{collections.landingPage[0].data.header.buttonLink}}">{{collections.landingPage[0].data.header.buttonText}}</a>
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+                </div> <!-- end of container -->
+            </div> <!-- end of header-content -->
+            
+            <!-- Video Background -->
+            <video autoplay loop muted id="video-background" poster="images/header-background.jpg" playsinline>
+                <source src="images/header-background-video.mp4" type="video/mp4" />
+            </video>
+            <!-- end of video background -->
+
+        </header> <!-- end of header -->
+        <!-- end of header -->
+
+
+        <!-- About Us -->
+        <div id="about" class="basic-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="image-container">
+                            <img class="img-fluid" src="images/services-1.jpg" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-5">
+                        <div class="text-container">
+                            <h2>{{collections.landingPage[0].data.about.title}}</h2>
+                            <p>{{collections.landingPage[0].data.about.content}}</p>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-1 -->
+        <!-- end of services 1 -->
+
+
+        <!-- Blogs -->
+        <div id="blogs" class="filter bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="h2-heading">Blogs</h2>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="grid">
+                        {%- for blog in collections.landingPage[0].data.blogs -%}
+                            <div class="element-item business software">
+                                <a href="{{blog.link}}">
+                                    <img class="img-fluid" src="{{blog.image}}" alt="alternative">
+                                    <p><strong>{{blog.title}}</strong> - {{blog.description}}</p>
+                                </a>
+                            </div>
+                        {%- endfor -%}
+                        </div> <!-- end of grid -->
+                        <!-- end of filter -->
+                        
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of filter -->
+        <!-- end of projects -->
+
+        <!-- Statistics -->
+        <div class="counter bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <!-- Counter -->
+                        <div class="counter-container">
+                        {%- for statistic in collections.landingPage[0].data.statistics -%}
+                            <div class="counter-cell">
+                                <div data-purecounter-start="0" data-purecounter-end="{{statistic.value}}" data-purecounter-duration="3" class="purecounter">{{statistic.value}}</div>
+                                <div class="counter-info">{{statistic.title}}</div>
+                            </div>
+                            {%- endfor -%}
+                        </div> <!-- end of counter-container -->
+                        <!-- end of counter -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of counter -->
+        <!-- end of statistics -->
+
+
+        <!-- Contact -->
+        <div id="contact" class="form-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="h2-heading">Contact details</h2>
+                        <p class="p-heading">{{collections.landingPage[0].data.contact.description}}</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li><i class="fas fa-map-marker-alt"></i> &nbsp;{{collections.landingPage[0].data.contact.address}}</li>
+                            <li><i class="fas fa-phone"></i> &nbsp;<a href="tel:{{collections.global[0].data.phone}}">{{collections.global[0].data.phone}}</a></li>
+                            <li><i class="fas fa-envelope"></i> &nbsp;<a href="mailto:contact@name.com">{{collections.global[0].data.email}}</a></li>
+                        </ul>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of form-1 -->
+        <!-- end of contact -->
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-col first">
+                            <h6>{{collections.landingPage[0].data.footer.title}}</h6>
+                            <p class="p-small">{{collections.landingPage[0].data.footer.description}}</p>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col second">
+                           
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col third">
+                            <span class="fa-stack">
+                                <a href="{{collections.global[0].data.facebook}}">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="{{collections.global[0].data.twitter}}">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="https://wa.me/{{collections.global[0].data.phone}}">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-whatsapp fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="{{collections.global[0].data.instagram}}">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <p class="p-small"><a href="mailto:{{collections.global[0].data.email}}"><strong>{{collections.global[0].data.email}}</strong></a></p>
+                        </div> <!-- end of footer-col -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->  
+        <!-- end of footer -->
+
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="p-small">Copyright © {{collections.global[0].data.site_name}}</p>
+                    </div> <!-- end of col -->
+                </div> <!-- enf of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of copyright --> 
+        <!-- end of copyright -->
+        
+
+        <!-- Back To Top Button -->
+        <button onclick="topFunction()" id="myBtn">
+            <img src="./images/up-arrow.png" alt="alternative">
+        </button>
+        <!-- end of back to top button -->
+            
+        <!-- Scripts -->
+        <script src="./assets/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+        <script src="./assets/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="./assets/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+        <script src="./assets/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+        <script src="./assets/scripts.js"></script> <!-- Custom scripts -->
+    </body>
+</html>
