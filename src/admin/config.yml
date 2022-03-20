@@ -71,9 +71,9 @@ collections:
     create: true
     slug: "{{slug}}" 
     fields:
-        - {label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}"}
+        - {label: Slug,  name: slug, required: true, widget: string }
         - {label: "Title", name: "title", widget: "string"}
-        - {label: "Preview Text", name: "exerpt", widget: "text"}
+        - {label: "Preview Text", name: "excerpt", widget: "text"}
         - {label: "Image", name: "image", widget: "image"}
         - {label: "Upload Date", name: "uploadDate", widget: "date"}
-        - {label: "Article", name: "content", widget: "markdown"}
+        - {label: "Article", name: "body", widget: "markdown"}
