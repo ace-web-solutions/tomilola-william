@@ -65,15 +65,14 @@ collections:
               - {label: "About", name: "about", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
 
-  - name: Posts
-    label: post
+  - name: articles
+    label: Articles
     folder: "src/posts"
     create: true
     slug: "{{slug}}" 
     fields:
-        - {label: Slug,  name: slug, required: true, widget: string }
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Preview Text", name: "excerpt", widget: "text"}
-        - {label: "Image", name: "image", widget: "image"}
-        - {label: "Upload Date", name: "uploadDate", widget: "date"}
-        - {label: "Article", name: "body", widget: "markdown"}
+        - {label: "Title", required: true, name: "title", widget: "string"}
+        - {label: "Preview Text", required: true, name: "excerpt", widget: "text"}
+        - {label: "Image", required: true, name: "image", widget: "image"}
+        - {label: "Upload Date", required: true, name: "uploadDate", widget: "date"}
+        - {label: "Article", required: true, name: "body", widget: "markdown"}

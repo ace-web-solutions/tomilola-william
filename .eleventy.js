@@ -7,6 +7,7 @@ module.exports = eleventyConfig =>{
     eleventyConfig.addPassthroughCopy('images')
     eleventyConfig.addPassthroughCopy('src/admin')
 
+
     return {
         passthroughFileCopy: true,
         markdownTemplateEngine: 'njk',

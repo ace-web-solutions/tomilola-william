@@ -140,7 +140,8 @@
                         <div class="grid">
                         {%- for blog in collections.posts -%}
                             <div class="element-item business software">
-                                <a href="/posts/{{blog.data.slug}}">
+                                <script>console.dir({{blog}})</script>
+                                <a href="/posts/{{blog.fileSlug}}">
                                     <img class="img-fluid" src="{{blog.data.image}}" alt="alternative">
                                     <p><strong>{{blog.data.title}}</strong> - {{blog.data.excerpt}}</p>
                                 </a>
