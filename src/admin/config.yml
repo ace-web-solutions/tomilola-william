@@ -67,7 +67,7 @@ collections:
 
   - name: Posts
     label: post
-    folder: "posts/"
+    folder: "src/posts"
     create: true
     slug: "{{slug}}" 
     fields:
@@ -76,3 +76,4 @@ collections:
         - {label: "Preview Text", name: "exerpt", widget: "text"}
         - {label: "Image", name: "image", widget: "image"}
         - {label: "Upload Date", name: "uploadDate", widget: "date"}
+        - {label: "Article", name: "content", widget: "markdown"}

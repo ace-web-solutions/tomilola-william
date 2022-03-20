@@ -4,8 +4,9 @@
   "description": "eleventy scafold",
   "main": "src/index.html",
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy"
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "deploy": "npx @11ty/eleventy && netlify deploy"
   },
   "repository": {
     "type": "git",
