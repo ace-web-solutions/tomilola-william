@@ -4,29 +4,30 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
+        
         <!-- SEO Meta Tags -->
-        <meta name="description" content="Your description">
-        <meta name="author" content="Your name">
+        <meta name="description" content="{{collections.global[0].data.site_description}}">
+        <meta name="author" content="{{collections.global[0].data.site_name}}">
 
         <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-        <meta property="og:site_name" content="" /> <!-- website name -->
+        <meta property="og:site_name" content=""{{collections.global[0].data.site_name}} /> <!-- website name -->
         <meta property="og:site" content="" /> <!-- website link -->
-        <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:title" content="{{collections.global[0].data.site_name}}"/> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="{{collections.global[0].data.site_description}}" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="/{{collections.global[0].data.site_favicon}}" /> <!-- image link, make sure it's jpg -->
         <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
         <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
         <!-- Webpage Title -->
-        <title>Webpage Title</title>
+        <title>{{collections.global[0].data.site_name}}</title>
         
         <!-- Styles -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-        <link href="./assets/bootstrap.min.css" rel="stylesheet">
-        <link href="./assets/fontawesome-all.min.css" rel="stylesheet">
-        <link href="./assets/swiper.css" rel="stylesheet">
-        <link href="./assets/styles.css" rel="stylesheet">
+        <link href="/assets/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/fontawesome-all.min.css" rel="stylesheet">
+        <link href="/assets/swiper.css" rel="stylesheet">
+        <link href="/assets/styles.css" rel="stylesheet">
         
         <!-- Favicon  -->
         <link rel="icon" href="images/favicon.png">
@@ -131,17 +132,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="h2-heading">Blogs</h2>
+                        <h2 class="h2-heading">Articles</h2>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="grid">
-                        {%- for blog in collections.landingPage[0].data.blogs -%}
+                        {%- for blog in collections.posts -%}
                             <div class="element-item business software">
-                                <a href="{{blog.link}}">
-                                    <img class="img-fluid" src="{{blog.image}}" alt="alternative">
-                                    <p><strong>{{blog.title}}</strong> - {{blog.description}}</p>
+                                <a href="/posts/{{blog.data.slug}}">
+                                    <img class="img-fluid" src="{{blog.data.image}}" alt="alternative">
+                                    <p><strong>{{blog.data.title}}</strong> - {{blog.data.excerpt}}</p>
                                 </a>
                             </div>
                         {%- endfor -%}
@@ -258,15 +259,15 @@
 
         <!-- Back To Top Button -->
         <button onclick="topFunction()" id="myBtn">
-            <img src="./images/up-arrow.png" alt="alternative">
+            <img src="/images/up-arrow.png" alt="alternative">
         </button>
         <!-- end of back to top button -->
             
         <!-- Scripts -->
-        <script src="./assets/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-        <script src="./assets/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-        <script src="./assets/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
-        <script src="./assets/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-        <script src="./assets/scripts.js"></script> <!-- Custom scripts -->
+        <script src="/assets/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+        <script src="/assets/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="/assets/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+        <script src="/assets/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+        <script src="/assets/scripts.js"></script> <!-- Custom scripts -->
     </body>
 </html>

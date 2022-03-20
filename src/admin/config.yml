@@ -64,3 +64,15 @@ collections:
             fields:
               - {label: "About", name: "about", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
+
+  - name: Posts
+    label: post
+    folder: "posts/"
+    create: true
+    slug: "{{slug}}" 
+    fields:
+        - {label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Preview Text", name: "exerpt", widget: "text"}
+        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Upload Date", name: "uploadDate", widget: "date"}

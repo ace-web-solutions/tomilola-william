@@ -11,19 +11,6 @@ about:
     Tempor commodo ullamcorper a lacus. At augue eget arcu dictum. Sit amet
     consectetur adipiscing elit duis
   image: ../uploads/services-1.jpg
-blogs:
-  - title: Blog
-    description: Tempor commodo ullamcorper a lacus. At augue eget arcu dictum.
-    image: ./uploads/project-1.jpg
-    link: /
-  - title: Isum
-    description: lorem ipsum dolor amet la kuji net reyu
-    image: ./uploads/project-2.jpg
-    link: /
-  - title: Lrem
-    description: lorem ipsum dolor amet la kuji net reyu
-    image: ./uploads/project-3.jpg
-    link: /
 statistics:
   - title: Lorem
     value: 10
