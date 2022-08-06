@@ -1,9 +1,10 @@
 ---
-title:  Blog
+title: First Block
 slug: blog
-excerpt: "Tempor commodo ullamcorper a lacus. At augue eget arcu dictum"
+excerpt: Tempor commodo ullamcorper a lacus. At augue eget arcu dictum
 image: ./uploads/project-1.jpg
 updatedDate: 2022-03-08
+uploadDate: 2022-08-06T16:33:21.116Z
 ---
 
 ## _The Last Markdown Editor, Ever_
