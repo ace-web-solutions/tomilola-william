@@ -1,6 +1,6 @@
 ---
 header:
-  title: lhezie Lorem Ipsum Dolor
+  title: Lorem Ipsum Dolor
   buttonText: Explore
   buttonLink: /
 about:
