@@ -1,6 +1,6 @@
 ---
 header:
-  title: Lorem Ipsum Dolor
+  title: lhezie Lorem Ipsum Dolor
   buttonText: Explore
   buttonLink: /
 about:
@@ -21,6 +21,7 @@ contact:
   address: 22nd Lorem ipsum dol, Lagos Streeet, FCT 333333
 footer:
   title: About
-  description: Temp commodo 
+  description: Temp commodo
+  about: tomilola
 tags: landingPage
 ---
