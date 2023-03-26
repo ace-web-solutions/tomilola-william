@@ -4,7 +4,7 @@ header:
   buttonText: Emancipating Men from Women Slavery
   buttonLink: /
 about:
-  title: "07017787114"
+  title: Things You Need To Know
   content: >-
     Never take a woman word serious. Always look at her action(s).
 
@@ -22,18 +22,14 @@ about:
 
 
     Always do the opposite of anything they say--in there, lies the magic
-  image: ../uploads/services-1.jpg
-statistics:
-  - title: Lorem
-    value: 10
-  - title: Ipsum
-    value: 30
+  image: /uploads/screenshot_20230327-004140.jpg
+statistics: []
 contact:
   description: Get In Touch With The Info Below
-  address: 22nd Lorem ipsum dol, Lagos Streeet, FCT 333333
+  address: "99, Pipeline way, Lagos. "
 footer:
   title: About
-  description: Temp commodo
+  description: "A Dosage of reality Medicine "
   about: tomilola
 tags: landingPage
 ---
